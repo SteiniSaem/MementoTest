@@ -1,13 +1,5 @@
 import React, { useReducer, useCallback } from "react";
-import {
-  View,
-  Text,
-  StyleSheet,
-  TextInput,
-  Button,
-  Alert,
-  Dimensions
-} from "react-native";
+import { View, StyleSheet, Button, Alert, Dimensions } from "react-native";
 import Input from "../components/Input";
 import { addToList } from "../store/actions/list";
 import { useDispatch, useSelector } from "react-redux";
@@ -114,7 +106,7 @@ const NewItemScreen = props => {
   );
 };
 
-NewItemScreen.navigationOptions = navData => {
+NewItemScreen.navigationOptions = () => {
   return {
     headerTitle: "Add New Item"
   };
